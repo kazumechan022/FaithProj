@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cakes - Cake Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7E8D4;
+            color: #5B3A2E;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in;
+        }
+        nav {
+            background-color: #8B5E3C;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #FFF4E3;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #F7E8D4;
+        }
+        .content {
+            text-align: center;
+            padding: 2rem;
+            background-color: #FFF4E3;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #8B5E3C;
+            margin-bottom: 10px;
+        }
+        .cake-section {
+            margin: 25px 0;
+        }
+        .cake-icon {
+            font-size: 2.5rem;
+            color: #8B5E3C;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'about' %}">Home</a>
+        <a href="{% url 'one' %}">Our Cakes</a>
+        <a href="{% url 'two' %}">Customization</a>
+    </nav>
+    <div class="content">
+        <div class="cake-icon">🍰</div>
+        <h1>Our Cake Collection</h1>
+        <p>Explore our delicious selection of cakes, each crafted to perfection for your special moments.</p>
+        <div class="cake-section">
+            <h2>Classic Cakes</h2>
+            <p>Enjoy timeless flavors like rich chocolate, vanilla, and red velvet, each prepared to satisfy classic tastes.</p>
+        </div>
+        <div class="cake-section">
+            <h2>Signature Cakes</h2>
+            <p>Our signature cakes feature unique flavors like matcha and caramel, offering a sophisticated twist on your favorite treats.</p>
+        </div>
+        <div class="cake-section">
+            <h2>Seasonal Specials</h2>
+            <p>Celebrate the season with cakes inspired by seasonal flavors, from pumpkin spice to fresh berry delights.</p>
+        </div>
+    </div>
+</body>
+</html>

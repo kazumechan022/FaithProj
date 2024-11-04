@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cake Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7E8D4; /* Light cream background */
+            color: #5B3A2E; /* Rich brown */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in;
+        }
+        nav {
+            background-color: #8B5E3C; /* Warm brown for nav */
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #FFF4E3; /* Light cream */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #F7E8D4;
+        }
+        .content {
+            text-align: center;
+            padding: 2rem;
+            background-color: #FFF4E3;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #8B5E3C;
+            margin-bottom: 10px;
+        }
+        .welcome-icon {
+            font-size: 2.5rem;
+            color: #8B5E3C;
+            margin: 15px 0;
+        }
+        .section {
+            margin: 25px 0;
+            padding: 0 20px;
+        }
+        .section p {
+            text-align: justify;
+        }
+        .button {
+            background-color: #8B5E3C;
+            color: #FFF4E3;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #5B3A2E;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'about' %}">Home</a>
+        <a href="{% url 'one' %}">Our Cakes</a>
+        <a href="{% url 'two' %}">Customization</a>
+    </nav>
+    <div class="content">
+        <div class="welcome-icon">🎂</div>
+        <h1>Welcome to Our Cake Shop!</h1>
+        <p>At Cake Shop, we specialize in crafting delightful, custom-made cakes that bring joy to every celebration. From birthdays to weddings, we're here to make every occasion unforgettable.</p>
+        <div class="section">
+            <h2>About Us</h2>
+            <p>Our passion for baking and dedication to quality ensures that each cake is crafted with care and attention to detail. We believe that every cake tells a story, and we aim to make yours special!</p>
+        </div>
+        <div class="section">
+            <h2>Our Team</h2>
+            <p>With years of experience and a commitment to quality, our bakers and designers work tirelessly to create cakes that are both beautiful and delicious. We believe in quality, creativity, and customer satisfaction.</p>
+        </div>
+        <button class="button">Learn More</button>
+    </div>
+</body>
+</html>

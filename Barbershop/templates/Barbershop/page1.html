@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Our Services</title>
+    <style>
+        body {
+            background-color: #e6ffee;
+            font-family: 'Arial', sans-serif;
+            color: #2f4f4f;
+        }
+        .navbar {
+            background-color: #2e8b57;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        .container {
+            padding-top: 50px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 128, 0, 0.2);
+        }
+        h2 {
+            color: #2e8b57;
+            font-size: 2em;
+        }
+        .list-group-item {
+            background-color: #f0fff4;
+            color: #2f4f4f;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="{% url 'barbershop_home' %}">Barbershop</a>
+        <a class="nav-link" href="{% url 'barbershop_page1' %}">Services</a>
+        <a class="nav-link" href="{% url 'barbershop_page2' %}">Barbers</a>
+    </nav>
+
+    <div class="container text-center">
+        <h2>Our Services</h2>
+        <ul class="list-group mt-4">
+            <li class="list-group-item">Haircuts</li>
+            <li class="list-group-item">Shaves</li>
+            <li class="list-group-item">Facial Treatments</li>
+            <li class="list-group-item">Hair Styling</li>
+        </ul>
+        <p class="mt-3">We offer a variety of services tailored to your style. Contact us to book an appointment!</p>
+    </div>
+</body>
+</html>

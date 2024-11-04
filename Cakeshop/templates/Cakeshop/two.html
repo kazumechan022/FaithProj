@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization - Cake Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7E8D4;
+            color: #5B3A2E;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in;
+        }
+        nav {
+            background-color: #8B5E3C;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #FFF4E3;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #F7E8D4;
+        }
+        .content {
+            text-align: center;
+            padding: 2rem;
+            background-color: #FFF4E3;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #8B5E3C;
+            margin-bottom: 10px;
+        }
+        .custom-icon {
+            font-size: 2.5rem;
+            color: #8B5E3C;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'about' %}">Home</a>
+        <a href="{% url 'one' %}">Our Cakes</a>
+        <a href="{% url 'two' %}">Customization</a>
+    </nav>
+    <div class="content">
+        <div class="custom-icon">🎨</div>
+        <h1>Customize Your Cake</h1>
+        <p>Tell us your vision, and we'll bring it to life! We offer customizations to make your cake unique to you.</p>
+        <h2>Options</h2>
+        <ul>
+            <li>Personalized Flavors</li>
+            <li>Custom Designs and Colors</li>
+            <li>Special Decorations</li>
+        </ul>
+    </div>
+</body>
+</html>

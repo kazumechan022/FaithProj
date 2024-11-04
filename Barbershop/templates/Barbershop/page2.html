@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Meet the Barbers</title>
+    <style>
+        body {
+            background-color: #f0fff4;
+            font-family: 'Arial', sans-serif;
+            color: #2f4f4f;
+        }
+        .navbar {
+            background-color: #2e8b57;
+        }
+        .navbar a {
+            color: white;
+            font-weight: bold;
+        }
+        .container {
+            padding-top: 50px;
+        }
+        h2 {
+            color: #2e8b57;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .barber-profile {
+            text-align: center;
+        }
+        .barber-profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0px 4px 12px rgba(0, 128, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .barber-profile img:hover {
+            transform: scale(1.1);
+        }
+        .barber-profile h5 {
+            color: #2e8b57;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="{% url 'barbershop_home' %}">Barbershop</a>
+        <a class="nav-link" href="{% url 'barbershop_page1' %}">Services</a>
+        <a class="nav-link" href="{% url 'barbershop_page2' %}">Barbers</a>
+    </nav>
+
+    <div class="container">
+        <h2>Meet Our Barbers</h2>
+        <div class="row">
+            <div class="col-md-4 barber-profile">
+                <img src="https://via.placeholder.com/150" alt="Barber 1">
+                <h5>John Doe</h5>
+                <p>Specialist in classic cuts and grooming</p>
+            </div>
+            <div class="col-md-4 barber-profile">
+                <img src="https://via.placeholder.com/150" alt="Barber 2">
+                <h5>Sanieca Mason</h5>
+                <p>Expert in modern styles and trends</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

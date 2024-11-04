@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Barbershop Home</title>
+    <style>
+        body {
+            background-color: #f0fff4;
+            font-family: 'Arial', sans-serif;
+            color: #2f4f4f;
+        }
+        .navbar {
+            background-color: #2e8b57;
+            text-align: center;
+        }
+        .navbar a {
+            color: #f4f4f4;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .container {
+            margin-top: 80px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 128, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            font-size: 2.8em;
+            color: #2e8b57;
+        }
+        .btn-custom {
+            background-color: #2e8b57;
+            border-color: #2e8b57;
+            color: white;
+            font-size: 1.1em;
+            padding: 10px 20px;
+        }
+        .btn-custom:hover {
+            background-color: #3cb371;
+            border-color: #3cb371;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 128, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="{% url 'barbershop_home' %}">Barbershop</a>
+        <a class="nav-link" href="{% url 'barbershop_page1' %}">Services</a>
+        <a class="nav-link" href="{% url 'barbershop_page2' %}">Barbers</a>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to the Barbershop</h1>
+        <div class="image-container my-4">
+            <img src="https://via.placeholder.com/400x300" alt="Barbershop Image">
+        </div>
+        <p class="mb-4">Experience premium grooming services that match your style.</p>
+        <a href="{% url 'barbershop_page1' %}" class="btn btn-custom mx-2">Our Services</a>
+        <a href="{% url 'barbershop_page2' %}" class="btn btn-custom mx-2">Meet the Barbers</a>
+    </div>
+</body>
+</html>
